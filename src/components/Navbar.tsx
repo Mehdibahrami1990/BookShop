@@ -20,15 +20,17 @@ const Navbar = () => {
   return (
     <nav className="shadow p-4">
       <Container>
-        {navLinks.map((item) => (
-          <Link
-            className={`mr-4 ${pathName === item.href ? "text-sky-500" : ""}`}
-            href={item.href}
-            key={item.href}
-          >
-            {item.title}
-          </Link>
-        ))}
+        <div>
+          {navLinks.map((item) => (
+            <Link
+              className={`mr-4 ${pathName === item.href ? "text-sky-500" : ""}`}
+              href={item.href}
+              key={item.href}
+            >
+              {item.title}
+            </Link>
+          ))}
+        </div>
       </Container>
     </nav>
   );
