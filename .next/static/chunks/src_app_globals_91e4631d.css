@@ -454,20 +454,12 @@
     margin-right: calc(var(--spacing) * 4);
   }
 
-  .flex {
-    display: flex;
-  }
-
   .grid {
     display: grid;
   }
 
   .grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .flex-row-reverse {
-    flex-direction: row-reverse;
   }
 
   .gap-4 {
@@ -484,10 +476,6 @@
 
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
-  }
-
-  .text-right {
-    text-align: right;
   }
 
   .font-bold {
