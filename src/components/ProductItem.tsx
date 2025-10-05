@@ -1,11 +1,6 @@
+import { ProductItemProps } from "@/types/type";
 import React from "react";
-interface ProductItemProps {
-  id: string;
-  image: string;
-  title: string;
-  describtion: string;
-  price: number;
-}
+
 const ProductItem = ({
   image,
   title,

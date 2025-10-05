@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 15, "column": 0}, "map": {"version":3,"sources":["file:///media/mehdi/b2065d47-d565-4af4-a236-1ab2b2ea64e3/MyProjects/next_14/shopcenter/src/app/store/%5Bid%5D/page.tsx"],"sourcesContent":["import React from 'react'\n\nconst Product = () => {\n  return (\n    <div>Product</div>\n  )\n}\n\nexport default Product"],"names":[],"mappings":";;;;;;AAEA,MAAM,UAAU;IACd,qBACE,8OAAC;kBAAI;;;;;;AAET;uCAEe","debugId":null}}]
+}
