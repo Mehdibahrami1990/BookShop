@@ -18,18 +18,25 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="shadow p-4">
+    <nav className="shadow p-4 w-screen">
       <Container>
-        <div>
-          {navLinks.map((item) => (
-            <Link
-              className={`mr-4 ${pathName === item.href ? "text-sky-500" : ""}`}
-              href={item.href}
-              key={item.href}
-            >
-              {item.title}
-            </Link>
-          ))}
+        <div className="flex justify-between items-center">
+          <div>
+            {navLinks.map((item) => (
+              <Link
+                className={`mr-4 ${
+                  pathName === item.href ? "text-sky-500" : ""
+                }`}
+                href={item.href}
+                key={item.href}
+              >
+                {item.title}
+              </Link>
+            ))}
+          </div>
+          <div>
+            <Link href="/cart">Shopping Cart</Link>
+          </div>
         </div>
       </Container>
     </nav>

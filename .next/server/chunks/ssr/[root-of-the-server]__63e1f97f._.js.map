@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 15, "column": 0}, "map": {"version":3,"sources":["file:///media/mehdi/b2065d47-d565-4af4-a236-1ab2b2ea64e3/MyProjects/next_14/shopcenter/src/components/Container.tsx"],"sourcesContent":["interface ContainerProps {\n  children: React.ReactNode;\n}\n\nconst Container = ({ children }: ContainerProps) => {\n  return <div className=\"container mx-auto\">{children}</div>;\n};\n\nexport default Container;\n"],"names":[],"mappings":";;;;;;AAIA,MAAM,YAAY,CAAC,EAAE,QAAQ,EAAkB;IAC7C,qBAAO,8OAAC;QAAI,WAAU;kBAAqB;;;;;;AAC7C;uCAEe","debugId":null}},
+    {"offset": {"line": 36, "column": 0}, "map": {"version":3,"sources":["file:///media/mehdi/b2065d47-d565-4af4-a236-1ab2b2ea64e3/MyProjects/next_14/shopcenter/src/app/cart/page.tsx"],"sourcesContent":["import Container from \"@/components/Container\";\nimport React from \"react\";\n\nconst Cart = () => {\n  return (\n    <Container>\n      <h1 className=\"my-4\">Shopping Cart</h1>\n      <div className=\" bg-slate-100\">\n      \n      </div>\n    </Container>\n  );\n};\n\nexport default Cart;\n"],"names":[],"mappings":";;;;;AAAA;;;AAGA,MAAM,OAAO;IACX,qBACE,8OAAC,0IAAS;;0BACR,8OAAC;gBAAG,WAAU;0BAAO;;;;;;0BACrB,8OAAC;gBAAI,WAAU;;;;;;;;;;;;AAKrB;uCAEe","debugId":null}}]
+}
