@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-empty-object-type */
+import AddToCart from "@/components/AddToCart";
 import Container from "@/components/Container";
 import { ProductItemProps } from "@/types/type";
 import React from "react";
@@ -25,16 +26,7 @@ const Product = async ({ params }: ProductsProps) => {
           <p className="font-bold">
             price : <span>{data.price}$</span>
           </p>
-          <div className="mt-4">
-            <button className="px-4 py-2 bg-sky-500 text-white rounded-2xl cursor-pointer">
-              +
-            </button>
-            <span className="mx-4">3</span>
-            <button className="px-4 py-2 bg-sky-500 text-white rounded-2xl cursor-pointer">
-              {" "}
-              -
-            </button>
-          </div>
+          <AddToCart id={id} />
         </div>
       </div>
     </Container>
