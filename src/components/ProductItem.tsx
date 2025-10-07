@@ -1,4 +1,5 @@
 import { ProductItemProps } from "@/types/type";
+import { formatNumber } from "@/utils/NumberSeperate";
 import React from "react";
 
 const ProductItem = ({
@@ -15,7 +16,7 @@ const ProductItem = ({
           <h3 className="font-bold">{title}</h3>
           {/* <p>{describtion}</p> */}
           <p>
-            price : <span>{price}$</span>
+            price : <span>{formatNumber(price)}$</span>
           </p>
         </div>
       </div>

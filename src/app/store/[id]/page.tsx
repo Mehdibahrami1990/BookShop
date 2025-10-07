@@ -2,6 +2,7 @@
 import AddToCart from "@/components/AddToCart";
 import Container from "@/components/Container";
 import { ProductItemProps } from "@/types/type";
+import { formatNumber } from "@/utils/NumberSeperate";
 import React from "react";
 
 interface ProductsProps {
@@ -24,7 +25,7 @@ const Product = async ({ params }: ProductsProps) => {
           <h2 className="font-bold text-2xl">{data.title}</h2>
           <p className="text-gray-400">{data.describtion}</p>
           <p className="font-bold">
-            price : <span>{data.price}$</span>
+            price : <span>{formatNumber(data.price)}$</span>
           </p>
           <AddToCart id={id} />
         </div>

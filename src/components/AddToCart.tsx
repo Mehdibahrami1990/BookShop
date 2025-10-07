@@ -32,9 +32,9 @@ const AddToCart = ({ id }: AddToCartProps) => {
       </div>
       <button
         onClick={() => handleRemoveProduct(parseInt(id))}
-        className="bg-red-500 text-white rounded-2xl px-4 py-2 mt-5 cursor-pointer"
+        className="bg-red-500 text-white rounded-2xl px-4 py-2 mt-2 cursor-pointer"
       >
-        Delete from Cart
+        Remove
       </button>
     </div>
   );

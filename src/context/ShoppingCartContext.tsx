@@ -12,8 +12,8 @@ type ShoppingCartContextProviderProps = {
 };
 
 type CartItem = {
-  id?: number | null;
-  quantity?: number | null;
+  id: number;
+  quantity: number;
 };
 
 type ShoppingCartContextType = {
