@@ -109,6 +109,21 @@ function ShoppingCartContextProvider(param) {
             return currentItems.filter((item)=>item.id != id);
         });
     };
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "ShoppingCartContextProvider.useEffect": ()=>{
+            const storedCartItems = localStorage.getItem("cartItems");
+            if (storedCartItems) {
+                setTotalItems(JSON.parse(storedCartItems));
+            }
+        }
+    }["ShoppingCartContextProvider.useEffect"], []);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "ShoppingCartContextProvider.useEffect": ()=>{
+            localStorage.setItem("cartItems", JSON.stringify(totalItems));
+        }
+    }["ShoppingCartContextProvider.useEffect"], [
+        totalItems
+    ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(ShoppingCartContext.Provider, {
         value: {
             totalItems,
@@ -122,11 +137,11 @@ function ShoppingCartContextProvider(param) {
         children: children
     }, void 0, false, {
         fileName: "[project]/src/context/ShoppingCartContext.tsx",
-        lineNumber: 95,
+        lineNumber: 108,
         columnNumber: 5
     }, this);
 }
-_s1(ShoppingCartContextProvider, "Wxk2wmQZlmDmm/YsK9rywJKeWhw=");
+_s1(ShoppingCartContextProvider, "x9wlW6g6qGu4Md0YSoVfJgWM6o4=");
 _c = ShoppingCartContextProvider;
 var _c;
 __turbopack_context__.k.register(_c, "ShoppingCartContextProvider");

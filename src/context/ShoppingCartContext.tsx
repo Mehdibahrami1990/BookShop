@@ -5,6 +5,7 @@ import {
   Dispatch,
   SetStateAction,
   useContext,
+  useEffect,
 } from "react";
 
 type ShoppingCartContextProviderProps = {
@@ -91,6 +92,18 @@ export function ShoppingCartContextProvider({
       return currentItems.filter((item) => item.id != id);
     });
   };
+
+  useEffect(() => {
+    const storedCartItems = localStorage.getItem("cartItems");
+    if (storedCartItems) {
+      setTotalItems(JSON.parse(storedCartItems));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(totalItems));
+  }, [totalItems]);
+
   return (
     <ShoppingCartContext.Provider
       value={{

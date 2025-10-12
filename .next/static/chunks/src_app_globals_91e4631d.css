@@ -498,6 +498,10 @@
     margin-top: calc(var(--spacing) * 8);
   }
 
+  .mt-9 {
+    margin-top: calc(var(--spacing) * 9);
+  }
+
   .mr-3 {
     margin-right: calc(var(--spacing) * 3);
   }
@@ -554,12 +558,20 @@
     justify-content: center;
   }
 
+  .gap-1\.5 {
+    gap: calc(var(--spacing) * 1.5);
+  }
+
   .gap-2 {
     gap: calc(var(--spacing) * 2);
   }
 
   .gap-4 {
     gap: calc(var(--spacing) * 4);
+  }
+
+  .gap-6 {
+    gap: calc(var(--spacing) * 6);
   }
 
   .overflow-hidden {

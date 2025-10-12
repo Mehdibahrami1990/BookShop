@@ -10,3 +10,12 @@ export interface DiscountDataProps {
   code: string;
   percentage: number;
 }
+export interface ProductListProps {
+  first: number | null;
+  items: number | null;
+  last: number | null;
+  next: number | null;
+  pages: number;
+  prev: number | null;
+  data: ProductItemProps[];
+}

@@ -2,10 +2,23 @@ import Container from "@/components/Container";
 import ProductItem from "@/components/ProductItem";
 import Link from "next/link";
 import React from "react";
-import { ProductItemProps } from "@/types/type";
-const Store = async () => {
-  const result = await fetch("http://localhost:3001/products");
-  const data = await result.json() as ProductItemProps[];
+import { ProductListProps } from "@/types/type";
+import Pagintion from "@/components/Pagintion";
+
+interface StoreProps {
+  // eslint-disable-next-line @typescript-eslint/no-empty-object-type
+  params: Promise<{}>;
+  searchParams: Promise<{ page: string; per_page: string }>;
+}
+
+const Store = async ({ searchParams }: StoreProps) => {
+  const page = (await searchParams).page ?? "1";
+  const per_page = (await searchParams).per_page ?? "3";
+
+  const result = await fetch(
+    `http://localhost:3001/products?_page=${page}&_per_page=${per_page}`
+  );
+  const data = (await result.json()) as ProductListProps;
   // const DUMMY_DATA = [
   //   {
   //     id: "1",
@@ -48,12 +61,13 @@ const Store = async () => {
     <Container>
       <h1 className="py-5">store</h1>
       <div className="grid grid-cols-4 gap-4">
-        {data.map((item) => (
+        {data.data.map((item) => (
           <Link key={item.id} href={`store/${item.id}`}>
             <ProductItem {...item} />
           </Link>
         ))}
       </div>
+      <Pagintion pageCount={data.pages} />
     </Container>
   );
 };
