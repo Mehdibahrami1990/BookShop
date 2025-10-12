@@ -250,6 +250,9 @@ const Cart = ()=>{
     _s();
     const { totalItems } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$context$2f$ShoppingCartContext$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useShoppingCartContext"])();
     const [data, setData] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
+    const [discountCode, setDiscountCode] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
+    const [finalPrice, setFinalPrice] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
+    const [disCountedPrice, setDisCountedPrice] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "Cart.useEffect": ()=>{
             ({
@@ -262,6 +265,19 @@ const Cart = ()=>{
             })["Cart.useEffect"]();
         }
     }["Cart.useEffect"], []);
+    const totalPrice = totalItems.reduce((total, item)=>{
+        const selectedProduct = data.find((p)=>p.id == item.id.toString());
+        return total + ((selectedProduct === null || selectedProduct === void 0 ? void 0 : selectedProduct.price) || 0) * item.quantity;
+    }, 0);
+    const handleSubmitDiscount = ()=>{
+        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])("http://localhost:3001/discounts?code=".concat(discountCode)).then((result)=>{
+            const data = result.data;
+            const disCountedPrice = totalPrice * data[0].percentage / 100;
+            const finalPrice = totalPrice - disCountedPrice;
+            setFinalPrice(finalPrice);
+            setDisCountedPrice(disCountedPrice);
+        });
+    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Container$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -269,7 +285,7 @@ const Cart = ()=>{
                 children: "Shopping Cart"
             }, void 0, false, {
                 fileName: "[project]/src/app/cart/page.tsx",
-                lineNumber: 22,
+                lineNumber: 42,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -278,12 +294,12 @@ const Cart = ()=>{
                         ...item
                     }, item.id, false, {
                         fileName: "[project]/src/app/cart/page.tsx",
-                        lineNumber: 25,
+                        lineNumber: 45,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)))
             }, void 0, false, {
                 fileName: "[project]/src/app/cart/page.tsx",
-                lineNumber: 23,
+                lineNumber: 43,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -291,57 +307,60 @@ const Cart = ()=>{
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                         children: [
-                            "Total price :",
-                            " ",
+                            "Total price : ",
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 children: [
-                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$NumberSeperate$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["formatNumber"])(totalItems.reduce((total, item)=>{
-                                        const selectedProduct = data.find((p)=>p.id == item.id.toString());
-                                        return total + ((selectedProduct === null || selectedProduct === void 0 ? void 0 : selectedProduct.price) || 0) * item.quantity;
-                                    }, 0)),
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$NumberSeperate$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["formatNumber"])(totalPrice),
                                     "$"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/cart/page.tsx",
-                                lineNumber: 31,
+                                lineNumber: 50,
+                                columnNumber: 25
+                            }, ("TURBOPACK compile-time value", void 0))
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/app/cart/page.tsx",
+                        lineNumber: 49,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                        children: [
+                            "Your profit from this purchase :",
+                            " ",
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                children: [
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$NumberSeperate$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["formatNumber"])(disCountedPrice),
+                                    " $"
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/app/cart/page.tsx",
+                                lineNumber: 54,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/cart/page.tsx",
-                        lineNumber: 29,
-                        columnNumber: 9
-                    }, ("TURBOPACK compile-time value", void 0)),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                        children: [
-                            "Your profit from this purchase : ",
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                children: "75$"
-                            }, void 0, false, {
-                                fileName: "[project]/src/app/cart/page.tsx",
-                                lineNumber: 44,
-                                columnNumber: 44
-                            }, ("TURBOPACK compile-time value", void 0))
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/src/app/cart/page.tsx",
-                        lineNumber: 43,
+                        lineNumber: 52,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                         children: [
                             "Final price : ",
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                children: "75$"
-                            }, void 0, false, {
+                                children: [
+                                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$NumberSeperate$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["formatNumber"])(finalPrice),
+                                    " $"
+                                ]
+                            }, void 0, true, {
                                 fileName: "[project]/src/app/cart/page.tsx",
-                                lineNumber: 47,
+                                lineNumber: 57,
                                 columnNumber: 25
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/cart/page.tsx",
-                        lineNumber: 46,
+                        lineNumber: 56,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -350,40 +369,42 @@ const Cart = ()=>{
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                 className: "border p-1",
                                 type: "text",
+                                onChange: (e)=>setDiscountCode(e.target.value),
                                 placeholder: "Enter the discount code..."
                             }, void 0, false, {
                                 fileName: "[project]/src/app/cart/page.tsx",
-                                lineNumber: 50,
+                                lineNumber: 60,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                className: "bg-sky-600 text-white px-4 py-1 rounded ",
+                                onClick: handleSubmitDiscount,
+                                className: "bg-sky-600 text-white px-4 py-1 rounded",
                                 children: "Submit"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/cart/page.tsx",
-                                lineNumber: 55,
+                                lineNumber: 66,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/cart/page.tsx",
-                        lineNumber: 49,
+                        lineNumber: 59,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/cart/page.tsx",
-                lineNumber: 28,
+                lineNumber: 48,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/cart/page.tsx",
-        lineNumber: 21,
+        lineNumber: 41,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
-_s(Cart, "IATDH5UJUMydkpxazaJGVP2KqrU=", false, function() {
+_s(Cart, "D6gxVwS8L4nTglLXIZBp6Hk9v6A=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$context$2f$ShoppingCartContext$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useShoppingCartContext"]
     ];

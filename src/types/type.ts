@@ -5,3 +5,8 @@ export interface ProductItemProps {
   describtion: string;
   price: number;
 }
+export interface DiscountDataProps {
+  id: number;
+  code: string;
+  percentage: number;
+}

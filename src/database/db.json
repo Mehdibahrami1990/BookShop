@@ -5,7 +5,7 @@
       "image": "https://english-e-reader.net/covers/Trapped_The_Aron_Ralston_story-Caroline_Shackleton.jpg",
       "title": "Trapped! The Aron Ralston story",
       "describtion": "Aron Ralston is a famous traveler, climber and writer. He was educated as an engineer and his future life promised to be not too exciting and extreme. Once Aron realizes that everything is turning into something boring and monotonous. He does not like this. The young man needs some changes.",
-      "price": 1500000
+      "price": 100000
     },
     {
       "id": "2",
@@ -28,5 +28,10 @@
       "describtion": "Colonel Protheroe was not a good man. He had lots of enemies. So when he was found shot at the vicarage, many people became murder suspects. It could be his daughter Lettice who wanted to get freedom from the strict father and inherit his fortune. ",
       "price": 550000000
     }
-  ]
+  ],
+  "discounts":[
+  {"id": 1, "code": "OFF10", "percentage": 10},
+  {"id": 2, "code": "OFF20", "percentage": 20},
+  {"id": 3, "code": "SAVE30", "percentage": 30}
+]
 }
