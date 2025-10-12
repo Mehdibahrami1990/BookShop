@@ -4,19 +4,21 @@ import Link from "next/link";
 import React from "react";
 import { ProductListProps } from "@/types/type";
 import Pagintion from "@/components/Pagintion";
+import Search from "@/components/Search";
 
 interface StoreProps {
   // eslint-disable-next-line @typescript-eslint/no-empty-object-type
   params: Promise<{}>;
-  searchParams: Promise<{ page: string; per_page: string }>;
+  searchParams: Promise<{ page: string; per_page: string; title: string }>;
 }
 
 const Store = async ({ searchParams }: StoreProps) => {
   const page = (await searchParams).page ?? "1";
   const per_page = (await searchParams).per_page ?? "3";
+  const title = (await searchParams).title ?? "";
 
   const result = await fetch(
-    `http://localhost:3001/products?_page=${page}&_per_page=${per_page}`
+    `http://localhost:3001/products?_page=${page}&_per_page=${per_page}&title=${title}`
   );
   const data = (await result.json()) as ProductListProps;
   // const DUMMY_DATA = [
@@ -60,6 +62,7 @@ const Store = async ({ searchParams }: StoreProps) => {
   return (
     <Container>
       <h1 className="py-5">store</h1>
+      <Search />
       <div className="grid grid-cols-4 gap-4">
         {data.data.map((item) => (
           <Link key={item.id} href={`store/${item.id}`}>

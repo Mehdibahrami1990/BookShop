@@ -153,111 +153,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Paginti
 ;
 __turbopack_context__.n(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Pagintion$2e$tsx__$5b$app$2d$rsc$5d$__$28$client__reference__proxy$29$__);
 }),
-"[project]/src/app/store/page.tsx [app-rsc] (ecmascript)", ((__turbopack_context__) => {
-"use strict";
+"[project]/src/app/store/page.tsx [app-rsc] (ecmascript)", ((__turbopack_context__, module, exports) => {
 
-__turbopack_context__.s([
-    "default",
-    ()=>__TURBOPACK__default__export__
-]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.js [app-rsc] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Container$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/Container.tsx [app-rsc] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ProductItem$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ProductItem.tsx [app-rsc] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-rsc] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Pagintion$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/Pagintion.tsx [app-rsc] (ecmascript)");
-;
-;
-;
-;
-;
-const Store = async ({ searchParams })=>{
-    const page = (await searchParams).page ?? "1";
-    const per_page = (await searchParams).per_page ?? "3";
-    const result = await fetch(`http://localhost:3001/products?_page=${page}&_per_page=${per_page}`);
-    const data = await result.json();
-    // const DUMMY_DATA = [
-    //   {
-    //     id: "1",
-    //     image:
-    //       "https://english-e-reader.net/covers/Trapped_The_Aron_Ralston_story-Caroline_Shackleton.jpg",
-    //     title: "Trapped! The Aron Ralston story",
-    //     describtion:
-    //       "Aron Ralston is a famous traveler, climber and writer. He was educated as an engineer and his future life promised to be not too exciting and extreme. Once Aron realizes that everything is turning into something boring and monotonous. He does not like this. The young man needs some changes.",
-    //     price: 150,
-    //   },
-    //   {
-    //     id: "2",
-    //     image:
-    //       "https://english-e-reader.net/covers/Hard_Times_for_the_Time_Trippers-Maria_Jack.jpg",
-    //     title: "Hard Times for the Time Trippers",
-    //     describtion:
-    //       "Matt Johnson woke up in the middle of the night. The same nightmare tormented him again and again. In the dream, he came home after school. There was one day before the holidays.",
-    //     price: 50,
-    //   },
-    //   {
-    //     id: "3",
-    //     image: "https://english-e-reader.net/covers/The_Card-Bennet_Arnold.jpg",
-    //     title: "The Card",
-    //     describtion:
-    //       "If you want to become as successful as possible, what qualities will you need first of all? Will the smartest person be the most successful? Or good looks and charisma are the things you need",
-    //     price: 350,
-    //   },
-    //   {
-    //     id: "4",
-    //     image:
-    //       "https://english-e-reader.net/covers/The_Murder_at_the_Vicarage-Agatha_Christie.jpg",
-    //     title: "The Murder at the Vicarage",
-    //     describtion:
-    //       "Colonel Protheroe was not a good man. He had lots of enemies. So when he was found shot at the vicarage, many people became murder suspects. It could be his daughter Lettice who wanted to get freedom from the strict father and inherit his fortune. ",
-    //     price: 550,
-    //   },
-    // ];
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Container$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-        children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                className: "py-5",
-                children: "store"
-            }, void 0, false, {
-                fileName: "[project]/src/app/store/page.tsx",
-                lineNumber: 62,
-                columnNumber: 7
-            }, ("TURBOPACK compile-time value", void 0)),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "grid grid-cols-4 gap-4",
-                children: data.data.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                        href: `store/${item.id}`,
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ProductItem$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                            ...item
-                        }, void 0, false, {
-                            fileName: "[project]/src/app/store/page.tsx",
-                            lineNumber: 66,
-                            columnNumber: 13
-                        }, ("TURBOPACK compile-time value", void 0))
-                    }, item.id, false, {
-                        fileName: "[project]/src/app/store/page.tsx",
-                        lineNumber: 65,
-                        columnNumber: 11
-                    }, ("TURBOPACK compile-time value", void 0)))
-            }, void 0, false, {
-                fileName: "[project]/src/app/store/page.tsx",
-                lineNumber: 63,
-                columnNumber: 7
-            }, ("TURBOPACK compile-time value", void 0)),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Pagintion$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                pageCount: data.pages
-            }, void 0, false, {
-                fileName: "[project]/src/app/store/page.tsx",
-                lineNumber: 70,
-                columnNumber: 7
-            }, ("TURBOPACK compile-time value", void 0))
-        ]
-    }, void 0, true, {
-        fileName: "[project]/src/app/store/page.tsx",
-        lineNumber: 61,
-        columnNumber: 5
-    }, ("TURBOPACK compile-time value", void 0));
-};
-const __TURBOPACK__default__export__ = Store;
+const e = new Error("Could not parse module '[project]/src/app/store/page.tsx'\n\nExpected ',', got 'className'");
+e.code = 'MODULE_UNPARSABLE';
+throw e;
 }),
 "[project]/src/app/store/page.tsx [app-rsc] (ecmascript, Next.js Server Component)", ((__turbopack_context__) => {
 

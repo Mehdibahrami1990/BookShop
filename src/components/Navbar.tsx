@@ -17,6 +17,10 @@ const Navbar = () => {
       href: "/store",
       title: "Store",
     },
+    {
+      href: "/dashboard",
+      title: "Dashboard",
+    },
   ];
 
   return (
@@ -37,7 +41,9 @@ const Navbar = () => {
             ))}
           </div>
           <div>
-            <span className="px-2 py-1 bg-red-500 text-white rounded-full mr-3">{cartTotalQuantity}</span>
+            <span className="px-2 py-1 bg-red-500 text-white rounded-full mr-3">
+              {cartTotalQuantity}
+            </span>
             <Link href="/cart">Shopping Cart</Link>
           </div>
         </div>
