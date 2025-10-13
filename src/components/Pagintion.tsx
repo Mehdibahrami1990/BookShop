@@ -10,7 +10,7 @@ const Pagintion = ({ pageCount }: { pageCount: number }) => {
     const page = e.selected + 1;
     const currentSearchParams = new URLSearchParams(searchParams.toString());
     currentSearchParams.set("page", page.toString());
-    currentSearchParams.set("per_page", "2");
+    currentSearchParams.set("per_page", "4");
 
     router.push(`/store?${currentSearchParams.toString()}`);
   };

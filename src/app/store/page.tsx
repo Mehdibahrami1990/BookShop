@@ -14,7 +14,7 @@ interface StoreProps {
 
 const Store = async ({ searchParams }: StoreProps) => {
   const page = (await searchParams).page ?? "1";
-  const per_page = (await searchParams).per_page ?? "3";
+  const per_page = (await searchParams).per_page ?? "4";
   const title = (await searchParams).title ?? "";
 
   const result = await fetch(

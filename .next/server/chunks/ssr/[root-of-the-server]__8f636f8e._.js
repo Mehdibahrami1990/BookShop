@@ -210,7 +210,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Search$
 ;
 const Store = async ({ searchParams })=>{
     const page = (await searchParams).page ?? "1";
-    const per_page = (await searchParams).per_page ?? "3";
+    const per_page = (await searchParams).per_page ?? "4";
     const title = (await searchParams).title ?? "";
     const result = await fetch(`http://localhost:3001/products?_page=${page}&_per_page=${per_page}&title=${title}`);
     const data = await result.json();
