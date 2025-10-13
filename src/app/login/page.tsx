@@ -4,26 +4,34 @@ import axios from "axios";
 import React, { useState } from "react";
 import Cookie from "js-cookie";
 import { redirect } from "next/navigation";
+import { toast } from "react-toastify";
 const Login = () => {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const handleLogin = () => {
-    // const data = axios({
-    //   url: "",
-    //   method: "POST",
-    //   data: {
-    //     username: userName,
-    //     password: password,
-    //   },
-    // });
-    const response = {
-      token: "kdofjidfhdjfhjasgdasgasf",
-      expire: 4,
-    };
-    Cookie.set("token", response.token, {
-      expires: response.expire,
-    });
-    redirect("/dashboard");
+    if (!userName || !password) {
+      toast.error("Please enter username and password", {
+        position: "top-center",
+        autoClose: 3000,
+      });
+    } else {
+      // const data = axios({
+      //   url: "",
+      //   method: "POST",
+      //   data: {
+      //     username: userName,
+      //     password: password,
+      //   },
+      // });
+      const response = {
+        token: "kdofjidfhdjfhjasgdasgasf",
+        expire: 4,
+      };
+      Cookie.set("token", response.token, {
+        expires: response.expire,
+      });
+      redirect("/dashboard");
+    }
   };
   return (
     <div>
@@ -54,6 +62,7 @@ const Login = () => {
                     id="username"
                     name="username"
                     type="username"
+                    required
                     className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
                     onChange={(e) => setUserName(e.target.value)}
                   />
@@ -82,6 +91,7 @@ const Login = () => {
                     id="password"
                     name="password"
                     type="password"
+                    required
                     onChange={(e) => setPassword(e.target.value)}
                     className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
                   />

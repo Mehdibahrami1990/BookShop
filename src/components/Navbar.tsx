@@ -40,7 +40,9 @@ const Navbar = () => {
                 href={item.href}
                 key={item.href}
               >
-                {item.title}
+                {item.title === "Login" && Cookies.get("token")
+                  ? item.title === "Login"
+                  : item.title}
               </Link>
             ))}
           </div>
