@@ -47,10 +47,16 @@ const Navbar = () => {
             ))}
           </div>
           <div>
-            <span className="px-2 py-1 bg-red-500 text-white rounded-full mr-3">
-              {cartTotalQuantity}
-            </span>
-            <Link href="/cart">Shopping Cart</Link>
+            {pathName !== "/" && (
+              <>
+                <span className="px-2 py-1 bg-red-500 text-white rounded-full mr-3">
+                  {cartTotalQuantity}
+                </span>
+
+                <Link href="/cart">Shopping Cart</Link>
+              </>
+            )}
+
             {Cookies.get("token") && (
               <button
                 type="button"
