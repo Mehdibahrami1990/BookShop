@@ -42,13 +42,6 @@ const Dashboard = () => {
         alert("Something went wrong!");
       }
     });
-
-    // if (res.ok) {
-    //   router.push("/blogs");
-    //   router.refresh();
-    // } else {
-    //   alert("Something went wrong!");
-    // }
   };
   return (
     <div className=" p-4">
