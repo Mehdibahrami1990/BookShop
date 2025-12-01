@@ -1,16 +1,50 @@
-# Node rules:
-## Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
-.grunt
+# dependencies
+/node_modules/
+.pnp/
+/.pnp.js
 
-## Dependency directory
-## Commenting this out is preferred by some people, see
-## https://docs.npmjs.com/misc/faq#should-i-check-my-node_modules-folder-into-git
-node_modules
+# Next.js build output
+/.next/
+/out/
+/dist/
 
-# Book build output
-_book
+# Next.js / React / general environment variables
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
 
-# eBook build output
-*.epub
-*.mobi
-*.pdf
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Editor or OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Misc / caches / coverage
+/.cache/
+/coverage/
+/build/
+/tmp/
+/temp/
+
+# Typescript build / editor helper files
+*.tsbuildinfo
+.next-env.d.ts
+
+/yarn.lock
+/pnpm-lock.yaml
+
+uploads/
+public/uploads/

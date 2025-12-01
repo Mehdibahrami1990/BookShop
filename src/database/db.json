@@ -1,0 +1,106 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "image": "https://manybooks.net/sites/default/files/styles/220x330_ebook/public/webform/ebook_feature_application/12779/cover.jpg?itok=NtYj_Ad-",
+      "title": "Muscle Power, Mind Power",
+      "describtion": "Have you ever felt trapped in a life that doesn’t feel like your own? Overwhelmed by a world that seems to have no space for you, or weighed down by the relentless voice of your inner critic? If so, you’re not alone—and this book is for you.",
+      "price": 100
+    },
+    {
+      "id": "2",
+      "image": "https://manybooks.net/sites/default/files/styles/220x330_ebook/public/webform/ebook_feature_application/12887/thedeviltaketheblues-frontcover.jpg?itok=yMoasNQe",
+      "title": "The Devil Take the Blues",
+      "describtion": "During the 1920s, Beatrice Corbin just wants to keep her general store afloat and guard her sister Agnes, in the small town of Azoma, Louisiana. Until she is approached by the Devil and learns that her sister will be murdered. To save her, Beatrice makes a bet, staking her soul on the wager that she can find her sister's would-be killer in seven weeks.",
+      "price": 5000
+    },
+    {
+      "id": "3",
+      "image": "https://manybooks.net/sites/default/files/styles/220x330_ebook/public/webform/ebook_feature_application/12928/void-to-life-coverfront.jpg?itok=NOd4pIzL",
+      "title": "Void to Life",
+      "describtion": "Void to Life associatively tells the story of metaphysical alternatives and proposes a new vision in expanding the consciousness beyond the physical limit.",
+      "price": 35000
+    },
+    {
+      "id": "4",
+      "image": "https://manybooks.net/sites/default/files/styles/220x330_ebook/public/webform/ebook_feature_application/12955/pumpkin-spice-coffee-break-bundleffee-break-bundle-copy.jpg?itok=k2d4Q3Aj",
+      "title": "Pumpkin Spice: Coffee Break Bundle",
+      "describtion": "Witches everywhere are dusting off their brooms. For your next coffee break, spend a fun witching hour with feisty Manx witch, Fenella. Watch Tilly Mambo, the exotic queen of Voodoo, aka Queen of the Birds, doing witchy business in Haiti and New York. It’s a laugh-out-loud cackle! But beware, their dark humor and powerful hexing abilities might just leave you howling with laughter.",
+      "price": 5500
+    },
+    {
+      "id": "5",
+      "image": "https://manybooks.net/sites/default/files/styles/220x330_ebook/public/webform/ebook_feature_application/12898/fate-of-the-crown-1200-13-4-2022.jpg?itok=ooJQ84Ol",
+      "title": "Fate of the Crown",
+      "describtion": "From lonely girl to the kingdom’s last hope, Anna faces war, betrayal, and dark magic. Guided by Gerald, a once-forgotten warrior, she must rally the ancient races to save her kingdom. Every choice could mean victory—or the Dark Queen’s domination. Fate of the Crown is a story of courage, sacrifice, and the fight for what’s right.",
+      "price": 1000
+    },
+    {
+      "id": "6",
+      "image": "https://manybooks.net/sites/default/files/styles/220x330_ebook/public/webform/ebook_feature_application/12878/aztec-odyssey-cover.jpg?itok=DFy3YTRc",
+      "title": "Aztec Odyssey",
+      "describtion": "A treasure lost to time, a string of stolen artifacts, and one archaeologist determined to expose the truth. Faced with unravelling the mysteries of both the present and the past, aspiring archaeologist Nick LaBounty embarks on a dangerous mission to solve a long-held family mystery and discover the truth behind purloined Aztec artifacts.",
+      "price": 5000
+    },
+    {
+      "id": "7",
+      "image": "https://manybooks.net/sites/default/files/styles/220x330_ebook/public/webform/ebook_feature_application/12822/new-option-4.jpg?itok=xg-wfFeN",
+      "title": "The Physician of Nineveh",
+      "describtion": "When a ritual hurls royal physician Mannu from ancient Nineveh into modern London, he collides with Assyriologist Kate Mayne. As assassins close in, they must race to find a cure and confront a destiny that spans empires while discovering a bond stronger than time itself.",
+      "price": 35000
+    },
+    {
+      "id": "8",
+      "image": "https://manybooks.net/sites/default/files/styles/220x330_ebook/public/webform/ebook_feature_application/12945/the-victim.jpg?itok=KI1PIh4Q",
+      "title": "The Victim",
+      "describtion": "2 faces on TV - VICTIM and KILLER - which is she? She thought she'd escaped. Now a man's remains are found in a remote Australian waterhole. Police say MURDER! She is linked to it, brought back from England, and charged with the crime. Newspapers say, KILLED HER LOVER, FED HIM TO CROCODILES!She will tell nobody what happened on that fateful day",
+      "price": 550000
+    },
+    {
+      "id": "76",
+      "image": "https://manybooks.net/sites/default/files/styles/220x330_ebook/public/webform/ebook_feature_application/12749/rwp1-600x900.jpg?itok=PxskWNO-",
+      "title": "Protected by Outcasts",
+      "describtion": "My fated mate rejected me and exiled me into the dangerous wildlands. What can I offer three fierce alpha wolf shifters in return for their protection?",
+      "price": "20000"
+    },
+    {
+      "id": "211",
+      "image": "https://manybooks.net/sites/default/files/styles/220x330_ebook/public/webform/ebook_feature_application/12972/secrets-in-the-cauldron.jpg?itok=9cTjRjZL",
+      "title": "Secrets in the Cauldron",
+      "describtion": "A witch, a ghost, and a very nosy town. Morgan Summers must uncover the truth behind a chilling murder... or risk losing her freedom, her home, and her cozy life forever.",
+      "price": "250000"
+    },
+    {
+      "id": "233",
+      "image": "https://manybooks.net/sites/default/files/styles/220x330_ebook/public/webform/ebook_feature_application/12888/cover.jpg?itok=Qw0BPpg5",
+      "title": "Stronger Together",
+      "describtion": "Chloe is used to moving—it’s part of being an Army brat. But this time, she actually feels at home. But Chloe’s heart is still tugged in another direction—back to her old home,",
+      "price": "8500000"
+    },
+    {
+      "id": "802",
+      "image": "https://manybooks.net/sites/default/files/styles/220x330_ebook/public/webform/ebook_feature_application/12933/81ld7yw1b-l._sy342_.jpg?itok=Yg0oqxe7",
+      "title": "Book Discovery: AI Optimization",
+      "describtion": "Your book could be brilliant, and the reviews could be glowing. Your Amazon page could be perfectly optimized. Yet when potential readers ask AI assistants for recommendations that describe precisely what your book offers—a mystery with a heroic female detective who doesn't need rescuing your book remains invisible while others get recommended.",
+      "price": "2500"
+    }
+  ],
+  "discounts": [
+    {
+      "id": "1",
+      "code": "OFF10",
+      "percentage": 10
+    },
+    {
+      "id": "2",
+      "code": "OFF20",
+      "percentage": 20
+    },
+    {
+      "id": "3",
+      "code": "SAVE30",
+      "percentage": 30
+    }
+  ],
+  "orders":[]
+}

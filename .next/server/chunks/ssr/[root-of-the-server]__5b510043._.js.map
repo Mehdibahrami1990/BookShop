@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 22, "column": 0}, "map": {"version":3,"sources":["file:///media/mehdi/b2065d47-d565-4af4-a236-1ab2b2ea64e3/MyProjects/next_14/shopcenter/src/components/Pagintion.tsx"],"sourcesContent":["\"use client\";\nimport { useRouter } from \"next/router\";\nimport React from \"react\";\nimport ReactPaginate from \"react-paginate\";\n\nconst Pagintion = ({ pageCount }: { pageCount: number }) => {\n  const router = useRouter();\n\n  const handlePageClick = (e: { selected: number }) => {\n    const page = e.selected + 1;\n    router.push(`/store?page=${page}&per_page=5`);\n  };\n\n  return (\n    <div>\n      <ReactPaginate\n        breakLabel=\"...\"\n        nextLabel=\"next >\"\n        onPageChange={handlePageClick}\n        pageRangeDisplayed={5}\n        pageCount={pageCount}\n        previousLabel=\"< previous\"\n        renderOnZeroPageCount={null}\n      />\n    </div>\n  );\n};\n\nexport default Pagintion;\n"],"names":[],"mappings":";;;;;AACA;AAEA;AAHA;;;;AAKA,MAAM,YAAY,CAAC,EAAE,SAAS,EAAyB;IACrD,MAAM,SAAS,IAAA,2IAAS;IAExB,MAAM,kBAAkB,CAAC;QACvB,MAAM,OAAO,EAAE,QAAQ,GAAG;QAC1B,OAAO,IAAI,CAAC,CAAC,YAAY,EAAE,KAAK,WAAW,CAAC;IAC9C;IAEA,qBACE,8OAAC;kBACC,cAAA,8OAAC,yKAAa;YACZ,YAAW;YACX,WAAU;YACV,cAAc;YACd,oBAAoB;YACpB,WAAW;YACX,eAAc;YACd,uBAAuB;;;;;;;;;;;AAI/B;uCAEe","debugId":null}}]
+}

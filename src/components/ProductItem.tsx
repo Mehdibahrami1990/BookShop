@@ -1,0 +1,27 @@
+import { ProductItemProps } from "@/types/type";
+import { formatNumber } from "@/utils/NumberSeperate";
+import React from "react";
+
+const ProductItem = ({
+  image,
+  title,
+  price,
+//   describtion,
+}: ProductItemProps) => {
+  return (
+    <div>
+      <div className="shadow-md">
+        <img src={image} alt="catpic" />
+        <div className="p-2">
+          <h3 className="font-bold">{title}</h3>
+          {/* <p>{describtion}</p> */}
+          <p>
+            price : <span>{formatNumber(price)}$</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ProductItem;
